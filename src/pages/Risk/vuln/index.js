@@ -31,7 +31,7 @@ const getValue = obj =>
     .map(key => obj[key])
     .join(',');
 const statusMap = ['red', 'default', 'processing', 'green'];
-const status = ['未提交', '误报', '已提交','已修复'];
+const status = ['未提交', '误报', '已提交','确认'];
 const vulnLevelMap = ['default', 'green', 'yellow', 'red'];
 const vulnLevel = ['低危', '中危', '高危','严重'];
 

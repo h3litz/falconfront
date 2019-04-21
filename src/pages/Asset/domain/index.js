@@ -151,7 +151,7 @@ class Domain extends PureComponent {
         });
         dispatch({
           type: 'asset/fetchOriginDomain',
-          payload: { method:'originDomain' },
+          payload: { method:'originDomain','pageSize':'1000'  },
         });
       }
       

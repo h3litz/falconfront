@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/layouts__UserLayout.async.js"
   },
   {
-    "revision": "7f2a2e77bc259f508ee3",
+    "revision": "4fa4fbe24e8b5e1acb5a",
     "url": "/p__Asset__cdn__index.chunk.css"
   },
   {
@@ -44,19 +44,19 @@ self.__precacheManifest = [
     "url": "/p__Asset__domain__$id.async.js"
   },
   {
-    "revision": "5493c6e5a4d61441dbf9",
+    "revision": "8bdf95c341167386d847",
     "url": "/p__Asset__domain__index.chunk.css"
   },
   {
-    "revision": "5493c6e5a4d61441dbf9",
+    "revision": "8bdf95c341167386d847",
     "url": "/p__Asset__domain__index.async.js"
   },
   {
-    "revision": "a3973454e94f5046b0d9",
+    "revision": "b4597b92113541c3bac4",
     "url": "/p__Asset__ip__index.chunk.css"
   },
   {
-    "revision": "a3973454e94f5046b0d9",
+    "revision": "b4597b92113541c3bac4",
     "url": "/p__Asset__ip__index.async.js"
   },
   {
@@ -108,11 +108,11 @@ self.__precacheManifest = [
     "url": "/p__Dashboard__models__monitor.js.async.js"
   },
   {
-    "revision": "19aa69ef93cbdb6751f5",
+    "revision": "e1d14f74e1197463bb36",
     "url": "/p__Risk__vuln__index.chunk.css"
   },
   {
-    "revision": "19aa69ef93cbdb6751f5",
+    "revision": "e1d14f74e1197463bb36",
     "url": "/p__Risk__vuln__index.async.js"
   },
   {
@@ -144,7 +144,7 @@ self.__precacheManifest = [
     "url": "/layouts__BasicLayout.chunk.css"
   },
   {
-    "revision": "7f2a2e77bc259f508ee3",
+    "revision": "4fa4fbe24e8b5e1acb5a",
     "url": "/p__Asset__cdn__index.async.js"
   },
   {
@@ -200,8 +200,8 @@ self.__precacheManifest = [
     "url": "/27.async.js"
   },
   {
-    "revision": "c23aa881b8d0e959f6c0aeb5ae7e4baa",
-    "url": "/icons/icon-192x192.png"
+    "revision": "5661ce8e2472d2727e8fd0390b22ba37",
+    "url": "/icons/icon-512x512.png"
   },
   {
     "revision": "0fd3234e2458a9ef2d77",
@@ -212,8 +212,8 @@ self.__precacheManifest = [
     "url": "/29.chunk.css"
   },
   {
-    "revision": "5661ce8e2472d2727e8fd0390b22ba37",
-    "url": "/icons/icon-512x512.png"
+    "revision": "c23aa881b8d0e959f6c0aeb5ae7e4baa",
+    "url": "/icons/icon-192x192.png"
   },
   {
     "revision": "347329d0982682b42d40c8162817a940",

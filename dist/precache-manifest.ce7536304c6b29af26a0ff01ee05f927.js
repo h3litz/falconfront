@@ -108,11 +108,11 @@ self.__precacheManifest = [
     "url": "/p__Dashboard__models__monitor.js.async.js"
   },
   {
-    "revision": "cb9a2ec4864124f40755",
+    "revision": "efdba8af3ec6b799151a",
     "url": "/p__Risk__vuln__index.chunk.css"
   },
   {
-    "revision": "cb9a2ec4864124f40755",
+    "revision": "efdba8af3ec6b799151a",
     "url": "/p__Risk__vuln__index.async.js"
   },
   {
@@ -204,8 +204,8 @@ self.__precacheManifest = [
     "url": "/28.chunk.css"
   },
   {
-    "revision": "5661ce8e2472d2727e8fd0390b22ba37",
-    "url": "/icons/icon-512x512.png"
+    "revision": "347329d0982682b42d40c8162817a940",
+    "url": "/icons/icon-128x128.png"
   },
   {
     "revision": "69bb5aa3f2759249c2df",
@@ -224,8 +224,8 @@ self.__precacheManifest = [
     "url": "/icons/icon-192x192.png"
   },
   {
-    "revision": "694c4300be571fdd4d8b6abbe14d2e3f",
-    "url": "/favicon.png"
+    "revision": "5661ce8e2472d2727e8fd0390b22ba37",
+    "url": "/icons/icon-512x512.png"
   },
   {
     "revision": "70676633db7086b452dc",
@@ -248,8 +248,8 @@ self.__precacheManifest = [
     "url": "/index.html"
   },
   {
-    "revision": "347329d0982682b42d40c8162817a940",
-    "url": "/icons/icon-128x128.png"
+    "revision": "694c4300be571fdd4d8b6abbe14d2e3f",
+    "url": "/favicon.png"
   },
   {
     "revision": "4dce2ce512854a32275e",

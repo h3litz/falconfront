@@ -277,7 +277,7 @@ class Vuln extends PureComponent {
 
   handleBulkDeleteDone = () => {
     this.setState({
-      bulkDeleteDone: true,
+      bulkDeleteDone: false,
       bulkDeleteVisible: false
     });
   };

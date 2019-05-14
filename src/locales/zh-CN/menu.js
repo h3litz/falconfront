@@ -48,4 +48,6 @@ export default {
   'menu.asset.cdn': '泛解析域名',
   'menu.risk': '风险',
   'menu.risk.vuln': '漏洞',
+  'menu.scan-settings': '扫描配置',
+  'menu.scan-settings.awvs': 'awvs',
 };

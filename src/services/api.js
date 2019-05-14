@@ -2,6 +2,11 @@ import { stringify } from 'qs';
 import request from '@/utils/request';
 import cookie from 'react-cookies';
 
+const headers =  {
+  "X-CSRFToken": cookie.load('csrftoken'),
+  "Authorization": `Token ${localStorage.getItem('Token')}`
+    }
+
 export async function queryProjectNotice() {
   return request('/api/project/notice');
 }
@@ -127,7 +132,12 @@ export async function getFakeCaptcha(mobile) {
 }
 
 export async function getDashboardData() {
-  return request(`/api/dashboard`);
+  return request(`/api/dashboard`,
+  {headers: {
+  "X-CSRFToken": cookie.load('csrftoken'),
+  "Authorization": `Token ${localStorage.getItem('Token')}`
+    },
+  });
 }
 
 export async function queryAssets(params) {
@@ -192,12 +202,7 @@ export async function queryAssets(params) {
       alert(`method no ${method} provide!`);
       return '';
   };
-  return request(callback,
-    {headers: {
-    "X-CSRFToken": cookie.load('csrftoken'),
-    "Authorization": "Token " + localStorage.getItem('Token')
-      },
-    });
+  return request(callback,{headers,});
 }
 
 export async function bulkDeleteAssets(params) {
@@ -217,10 +222,7 @@ export async function bulkDeleteAssets(params) {
     body: {
       ...params,
     },
-    headers: {
-      "X-CSRFToken": cookie.load('csrftoken'),
-      "Authorization": "Token " + localStorage.getItem('Token')
-    },
+    headers,
   });
 }
 
@@ -241,10 +243,7 @@ export async function bulkUpdateAssets(params) {
     body: {
       ...params,
     },
-    headers: {
-      "X-CSRFToken": cookie.load('csrftoken'),
-      "Authorization": "Token " + localStorage.getItem('Token')
-    },
+    headers,
   });
 }
 
@@ -256,9 +255,7 @@ export async function queryAsset(params) {
   };
   return request(`/api/info/${method}/${params.id}`, {
     method: 'GET',
-    headers: {
-      "Authorization": "Token " + localStorage.getItem('Token')
-    },
+    headers,
   });
 }
 
@@ -273,10 +270,7 @@ export async function addAsset(params) {
     body: {
       ...params,
     },
-    headers: {
-      "X-CSRFToken": cookie.load('csrftoken'),
-      "Authorization": "Token " + localStorage.getItem('Token')
-    },
+    headers,
   });
 }
 
@@ -291,10 +285,7 @@ export async function updateAsset(params) {
     body: {
       ...params,
     },
-    headers: {
-      "X-CSRFToken": cookie.load('csrftoken'),
-      "Authorization": "Token " + localStorage.getItem('Token')
-    },
+    headers,
   });
 }
 
@@ -306,10 +297,131 @@ export async function deleteAsset(params) {
   };
   return request(`/api/info/${method}/${params.id}`, {
     method: 'DELETE',
+    headers,
+  });
+}
+
+export async function queryConfigs(params) {
+  const { method, search = '', status = '' , currentPage = '', pageSize = ''} = params;
+  if (typeof(params) === "undefined" && typeof(method) === "undefined") {
+    alert('params error or method no provide!');
+    return '';
+  };
+  let callback;
+  const currentRealPage = currentPage === '' ? '' :currentPage - 1;
+  switch (method) {
+    case 'awvs':
+      if (search||status||currentPage||pageSize){
+        callback = `/api/config/awvs?search=${search}&status=${status}&limit=${pageSize}&offset=${currentRealPage}0`;
+      }else{
+        callback = `/api/config/awvs`
+      };
+      break;
+    default:
+      alert(`method no ${method} provide!`);
+      return '';
+  };
+  return request(callback,{headers});
+}
+
+export async function bulkDeleteConfigs(params) {
+  const { method } = params;
+  if (typeof(params) === "undefined" && typeof(method) === "undefined") {
+    alert('params error or method no provide!');
+    return '';
+  };
+  return request(`/api/config/${method}/delete`, {
+    method: 'POST',
+    body: {
+      ...params,
+    },
     headers: {
       "X-CSRFToken": cookie.load('csrftoken'),
-      "Authorization": "Token " + localStorage.getItem('Token')
+      "Authorization": `Token ${localStorage.getItem('Token')}`
     },
   });
 }
 
+export async function bulkUpdateConfigs(params) {
+  const { method } = params;
+  if (typeof(params) === "undefined" && typeof(method) === "undefined") {
+    alert('params error or method no provide!');
+    return '';
+  };
+  return request(`/api/config/${method}/update`, {
+    method: 'POST',
+    body: {
+      ...params,
+    },
+    headers: {
+      "X-CSRFToken": cookie.load('csrftoken'),
+      "Authorization": `Token ${localStorage.getItem('Token')}`
+    },
+  });
+}
+
+export async function queryConfig(params) {
+  const { method } = params;
+  if (typeof(params) === "undefined" && typeof(method) === "undefined") {
+    alert('params error or method no provide!');
+    return '';
+  };
+  return request(`/api/config/${method}/${params.id}`, {
+    method: 'GET',
+    headers: {
+      "X-CSRFToken": cookie.load('csrftoken'),
+      "Authorization": `Token ${localStorage.getItem('Token')}`
+    },
+  });
+}
+
+export async function addConfig(params) {
+  const { method } = params;
+  if (typeof(params) === "undefined" && typeof(method) === "undefined") {
+    alert('params error or method no provide!');
+    return '';
+  };
+  return request(`/api/config/${method}`, {
+    method: 'POST',
+    body: {
+      ...params,
+    },
+    headers: {
+      "X-CSRFToken": cookie.load('csrftoken'),
+      "Authorization": `Token ${localStorage.getItem('Token')}`
+    },
+  });
+}
+
+export async function updateConfig(params) {
+  const { method } = params;
+  if (typeof(params) === "undefined" && typeof(method) === "undefined") {
+    alert('params error or method no provide!');
+    return '';
+  };
+  return request(`/api/config/${method}/${params.id}`, {
+    method: 'PUT',
+    body: {
+      ...params,
+    },
+    headers: {
+      "X-CSRFToken": cookie.load('csrftoken'),
+      "Authorization": `Token ${localStorage.getItem('Token')}`
+    },
+  });
+}
+
+export async function deleteConfig(params) {
+  const { method } = params;
+  if (typeof(params) === "undefined" && typeof(method) === "undefined") {
+    alert('params error or method no provide!');
+    return '';
+  };
+  return request(`/api/config/${method}/${params.id}`, {
+    method: 'DELETE',
+    headers: {
+      "X-CSRFToken": cookie.load('csrftoken'),
+      "Authorization": `Token ${localStorage.getItem('Token')}`
+    },
+  });
+}

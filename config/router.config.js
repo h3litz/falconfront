@@ -91,6 +91,18 @@ export default [
         ]
       },
       {
+        name: 'scan-settings',
+        icon: 'money-collect',
+        path: '/settings',
+        routes: [
+          {
+            name: 'awvs',
+            path: 'awvs',
+            component: './Settings/awvs/index.js',
+          },
+        ]
+      },
+      {
         component: '404',
       },
     ],

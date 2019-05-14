@@ -108,11 +108,11 @@ self.__precacheManifest = [
     "url": "/p__Dashboard__models__monitor.js.async.js"
   },
   {
-    "revision": "00d9cc6a2a70f74e024e",
+    "revision": "cb9a2ec4864124f40755",
     "url": "/p__Risk__vuln__index.chunk.css"
   },
   {
-    "revision": "00d9cc6a2a70f74e024e",
+    "revision": "cb9a2ec4864124f40755",
     "url": "/p__Risk__vuln__index.async.js"
   },
   {
@@ -204,8 +204,8 @@ self.__precacheManifest = [
     "url": "/28.chunk.css"
   },
   {
-    "revision": "5661ce8e2472d2727e8fd0390b22ba37",
-    "url": "/icons/icon-512x512.png"
+    "revision": "347329d0982682b42d40c8162817a940",
+    "url": "/icons/icon-128x128.png"
   },
   {
     "revision": "69bb5aa3f2759249c2df",
@@ -220,12 +220,12 @@ self.__precacheManifest = [
     "url": "/30.chunk.css"
   },
   {
-    "revision": "c23aa881b8d0e959f6c0aeb5ae7e4baa",
-    "url": "/icons/icon-192x192.png"
+    "revision": "5661ce8e2472d2727e8fd0390b22ba37",
+    "url": "/icons/icon-512x512.png"
   },
   {
-    "revision": "347329d0982682b42d40c8162817a940",
-    "url": "/icons/icon-128x128.png"
+    "revision": "c23aa881b8d0e959f6c0aeb5ae7e4baa",
+    "url": "/icons/icon-192x192.png"
   },
   {
     "revision": "70676633db7086b452dc",

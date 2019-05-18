@@ -2,10 +2,6 @@ import { stringify } from 'qs';
 import request from '@/utils/request';
 import cookie from 'react-cookies';
 
-const headers =  {
-  "X-CSRFToken": cookie.load('csrftoken'),
-  "Authorization": `Token ${localStorage.getItem('Token')}`
-    }
 
 export async function queryProjectNotice() {
   return request('/api/project/notice');
@@ -202,7 +198,10 @@ export async function queryAssets(params) {
       alert(`method no ${method} provide!`);
       return '';
   };
-  return request(callback,{headers,});
+  return request(callback,{headers: {
+    "X-CSRFToken": cookie.load('csrftoken'),
+    "Authorization": `Token ${localStorage.getItem('Token')}`
+  },});
 }
 
 export async function bulkDeleteAssets(params) {
@@ -222,7 +221,10 @@ export async function bulkDeleteAssets(params) {
     body: {
       ...params,
     },
-    headers,
+    headers:{
+      "X-CSRFToken": cookie.load('csrftoken'),
+      "Authorization": `Token ${localStorage.getItem('Token')}`
+    },
   });
 }
 
@@ -243,7 +245,10 @@ export async function bulkUpdateAssets(params) {
     body: {
       ...params,
     },
-    headers,
+    headers:{
+      "X-CSRFToken": cookie.load('csrftoken'),
+      "Authorization": `Token ${localStorage.getItem('Token')}`
+    },
   });
 }
 
@@ -255,7 +260,10 @@ export async function queryAsset(params) {
   };
   return request(`/api/info/${method}/${params.id}`, {
     method: 'GET',
-    headers,
+    headers:{
+      "X-CSRFToken": cookie.load('csrftoken'),
+      "Authorization": `Token ${localStorage.getItem('Token')}`
+    },
   });
 }
 
@@ -270,7 +278,10 @@ export async function addAsset(params) {
     body: {
       ...params,
     },
-    headers,
+    headers:{
+      "X-CSRFToken": cookie.load('csrftoken'),
+      "Authorization": `Token ${localStorage.getItem('Token')}`
+    },
   });
 }
 
@@ -285,7 +296,10 @@ export async function updateAsset(params) {
     body: {
       ...params,
     },
-    headers,
+    headers:{
+      "X-CSRFToken": cookie.load('csrftoken'),
+      "Authorization": `Token ${localStorage.getItem('Token')}`
+    },
   });
 }
 
@@ -297,7 +311,10 @@ export async function deleteAsset(params) {
   };
   return request(`/api/info/${method}/${params.id}`, {
     method: 'DELETE',
-    headers,
+    headers:{
+      "X-CSRFToken": cookie.load('csrftoken'),
+      "Authorization": `Token ${localStorage.getItem('Token')}`
+    },
   });
 }
 
@@ -321,7 +338,10 @@ export async function queryConfigs(params) {
       alert(`method no ${method} provide!`);
       return '';
   };
-  return request(callback,{headers});
+  return request(callback,{headers:{
+    "X-CSRFToken": cookie.load('csrftoken'),
+    "Authorization": `Token ${localStorage.getItem('Token')}`
+  },});
 }
 
 export async function bulkDeleteConfigs(params) {

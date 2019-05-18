@@ -91,6 +91,28 @@ export default [
         ]
       },
       {
+        name: 'outband',
+        icon: 'money-collect',
+        path: '/outband',
+        routes: [
+          {
+            name: 'xss',
+            path: 'xss',
+            component: './Outband/xss/index.js',
+          },
+          {
+            name: 'dns',
+            path: 'dns',
+            component: './Outband/dns/index.js',
+          },
+          {
+            name: 'http',
+            path: 'http',
+            component: './Outband/http/index.js',
+          },
+        ]
+      },
+      {
         name: 'scan-settings',
         icon: 'money-collect',
         path: '/settings',

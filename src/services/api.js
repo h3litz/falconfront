@@ -182,9 +182,9 @@ export async function queryAssets(params) {
       break;
     case 'originDomain':
       if (search || company || status || currentPage || pageSize){
-        callback = `/api/info/origin_domain?search=${search}&company=${company}&status=${status}&limit=${pageSize}&offset=${currentRealPage}0`;
+        callback = `/api/info/originDomain?search=${search}&company=${company}&status=${status}&limit=${pageSize}&offset=${currentRealPage}0`;
       }else {
-        callback = `/api/info/origin_domain`;
+        callback = `/api/info/originDomain`;
       };
       break;
     case 'vuln':

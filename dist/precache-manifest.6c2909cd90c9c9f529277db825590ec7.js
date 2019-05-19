@@ -16,11 +16,11 @@ self.__precacheManifest = [
     "url": "/pwacompat.min.js"
   },
   {
-    "revision": "f6aaaa1b6318c8436a51",
+    "revision": "1ac4dcb40b8ef134f152",
     "url": "/umi.js"
   },
   {
-    "revision": "f6aaaa1b6318c8436a51",
+    "revision": "1ac4dcb40b8ef134f152",
     "url": "/umi.css"
   },
   {
@@ -236,16 +236,16 @@ self.__precacheManifest = [
     "url": "/28.chunk.css"
   },
   {
-    "revision": "c23aa881b8d0e959f6c0aeb5ae7e4baa",
-    "url": "/icons/icon-192x192.png"
+    "revision": "694c4300be571fdd4d8b6abbe14d2e3f",
+    "url": "/favicon.png"
   },
   {
     "revision": "3ade47ab62be178ff950",
     "url": "/33.chunk.css"
   },
   {
-    "revision": "694c4300be571fdd4d8b6abbe14d2e3f",
-    "url": "/favicon.png"
+    "revision": "c23aa881b8d0e959f6c0aeb5ae7e4baa",
+    "url": "/icons/icon-192x192.png"
   },
   {
     "revision": "2570a56791d1545477ea",
